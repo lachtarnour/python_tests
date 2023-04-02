@@ -27,6 +27,6 @@ jobs:
         run: |
           cd data_engineer/tests
           pwd
-          python test1.py
+          python test.py
 
 
