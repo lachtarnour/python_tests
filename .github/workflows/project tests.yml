@@ -19,6 +19,6 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-     - name: Run tests
+      - name: Run tests
         run: |
           python data_engineer/tests/test1.py
