@@ -1,3 +1,2 @@
-re==2.2.1
-os-win==0.1.6; sys_platform == 'win32'
+nylas ==  6.9.0
 pickle5==0.0.11
