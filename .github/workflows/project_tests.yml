@@ -21,7 +21,7 @@ jobs:
           cd ..
           pwd
           python -m pip install --upgrade pip
-          pip install -r data_engineer/requirements.txt
+          pip install -r /home/runner/work/python_tests/data_engineer/requirements.txt
       - name: Run tests
         run: |
           python data_engineer/tests/test1.py
