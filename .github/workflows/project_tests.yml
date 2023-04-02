@@ -23,8 +23,7 @@ jobs:
 
       - name: Run tests
         run: |
-          cd data_engineer/tests
           pwd
-          python test.py
+          python data_engineer/tests/test.py
 
 
