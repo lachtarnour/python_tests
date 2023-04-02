@@ -20,7 +20,7 @@ jobs:
         run: |
           cd ..
           python -m pip install --upgrade pip
-          pip install -r dataengineer/requirements.txt
+          pip install -r data_engineer/requirements.txt
       - name: Run tests
         run: |
           python data_engineer/tests/test1.py
