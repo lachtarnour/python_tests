@@ -27,6 +27,7 @@ jobs:
 
       - name: Run tests
         run: |
+          cd data_engineer/tests
           python test1.py
 
 
