@@ -21,6 +21,7 @@ jobs:
           python -m pip install --upgrade pip
       - name: Run tests
         run: |
+          cd ..
           pwd
           python test1.py
 
