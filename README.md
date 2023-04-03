@@ -27,3 +27,9 @@ To run the Python script, you will need to install the required packages listed 
 
 
 <img src="data_engineer/Image test data eng/email 1-2.jpg" alt="image" width="242" height="511">
+
+
+<p align="center">
+  <img src="data_engineer/Image test data eng/email 1-2.jpg" alt="image" width="242" height="511",style="margin-right: 20px">
+  <img src="data_engineer/Image test data eng/email 2-2.jpg" alt="image" width="242" height="511"
+</p>
