@@ -34,8 +34,7 @@ class TestBieniciFinder(unittest.TestCase):
     
     # This method is called after each test method and cleans up the test environment
     def tearDown(self):
-        logging.info("End of test")
-        print("_______________________________________________")
+        logging.info("End of test\n_______________________________________________")
         
 
     # Define a test method to check if the email instance is an instance of the 'BieniciFinder' class
