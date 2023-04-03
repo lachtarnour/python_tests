@@ -4,6 +4,10 @@ import os
 import pickle
 import unittest
 import inspect
+import logging
+
+logging.basicConfig(level=logging.INFO)
+
 
 # Define the path of the currently executing Python script
 current_path = os.path.abspath(inspect.getsourcefile(lambda:0))
@@ -26,21 +30,22 @@ class TestBieniciFinder(unittest.TestCase):
     def setUp(self):
         # Create an instance of the 'BieniciFinder' class with the argument 'data' and assign it to the instance variable 'self.e'
         self.e = BieniciFinder(data)
-        print("setUp")
+        logging.info("Create instance of BieniciFinder")
     
     # This method is called after each test method and cleans up the test environment
     def tearDown(self):
-        print("____________")
-        pass
+        logging.info("End of test")
+        print("_______________________________________________")
+        
 
     # Define a test method to check if the email instance is an instance of the 'BieniciFinder' class
     def test_email_is_instance_of_Nylas_email(self):
-        print("test_email_is_instance_of_Nylas_email")
+        logging.info("test_email_is_instance_of_Nylas_email")
         self.assertIsInstance(self.e, BieniciFinder)
 
     # Define a test method to check if the required keys ('to', 'received_at', and 'body') are present in the 'self.e.email' dictionary
     def test_existence_input(self): 
-        print("test_existence_input")
+        logging.info("test_existence_input")
         self.assertIn("to", self.e.email)
         self.assertIn("received_at", self.e.email)
         self.assertIn("body", self.e.email)
@@ -49,7 +54,7 @@ class TestBieniciFinder(unittest.TestCase):
 
     def test_parse_existence(self):
         #Test whether the email can be parsed and contains all the expected data.
-        print('test_parse_existence')
+        logging.info('test_parse_existence')
         result = self.e.parse_email()
         self.assertIsInstance(result, dict)
         self.assertIn("professionnel", result)
@@ -73,7 +78,7 @@ class TestBieniciFinder(unittest.TestCase):
 
     # Test whether the parsed email data is equal to the expected values
     def test_parse_equal(self):
-        print('test_parse_equal')
+        logging.info('test_parse_equal')
         # html email modified for test
         with open("data_engineer/tests/test.html", 'r') as f:
             html_body_test = f.read()
@@ -110,5 +115,5 @@ if __name__=='__main__':
         # open the pickled data file and load its contents
         with open(path+data, 'rb') as f:
             data = pickle.load(f)
-            unittest.main()
+        unittest.main()
 

@@ -4,7 +4,7 @@ import nylas
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 import os
-
+import logging
 
 class Finder(ABC):
     def __init__(self, email):
@@ -31,7 +31,7 @@ class BieniciFinder(Finder):
                     break
         except KeyError:
             professional = None
-            print("professionnel mail not found")
+            logging.warning("professionnel mail not found")
         result["professionnel"] = professional
 
         # date
@@ -39,14 +39,14 @@ class BieniciFinder(Finder):
             date = self.email["received_at"]
         except KeyError:
             date = None
-            print("received_at not found")
+            logging.warning("received_at not found")
         result["date"] = date
 
         # body of message object
         try:
             body_html = BeautifulSoup(self.email["body"], 'html.parser')
         except KeyError:
-            print("body not found")
+            logging.warning("body not found")
 
         # candidat :
         try:
@@ -56,7 +56,7 @@ class BieniciFinder(Finder):
             ContactEmail = ContactInfo[2].text.replace("\xa0", " ")
             result["candidat"] = {"ContactName": ContactName, "ContactPhone": ContactPhone, "ContactEmail": ContactEmail}
         except (AttributeError, TypeError, KeyError, ValueError, IndexError) as e:
-            print(f"An exception occurred: {type(e).__name__}")
+            logging.warning(f"An exception occurred: {type(e).__name__}")
             result['candidat'] = {"ContactName": '', "ContactPhone": '', "ContactEmail": ''}
 
         # proprety
@@ -138,10 +138,11 @@ class BieniciFinder(Finder):
             try:
                 # Send the email
                 message = draft.send()
-                print("Message \"{}\" was sent with ID {}".format(message['subject'], message['id']))
+                logging.info(f"Email sent successfully with ID {message['id']} to address: {recipient}")
             except:
                 # Handle errors
-                print("An error occurred")
+                logging.error(f"Failed to send email to address: {recipient}")
+
         send_email(result)
                 
 

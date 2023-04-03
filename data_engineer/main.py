@@ -1,6 +1,12 @@
 import pickle
 from src.Classes import BieniciFinder, Finder
 from src.Reader import Reader
+import logging
+
+logging.basicConfig(
+    format='%(asctime)s - %(name)s - %(levelname)s: %(message)s',
+    level=logging.INFO)
+
 
 
 path = "data_engineer/files/"
