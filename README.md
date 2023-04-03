@@ -26,10 +26,9 @@ To run the Python script, you will need to install the required packages listed 
 `pip install -r requirements.txt`
 
 
-<img src="data_engineer/Image test data eng/email 1-2.jpg" alt="image" width="242" height="511">
-
-
 <p align="center">
-  <img src="data_engineer/Image test data eng/email 1-2.jpg" alt="image" width="242" height="511",style="margin-right: 20px">
-  <img src="data_engineer/Image test data eng/email 2-2.jpg" alt="image" width="242" height="511"
+  <img src="data_engineer/Image test data eng/email 1-2.jpg" alt="image" width="340" height="718",style="margin-right: 20px">
+  <img src="data_engineer/Image test data eng/email 2-2.jpg" alt="image" width="340" height="718"
 </p>
+
+<img src="data_engineer/Image test data eng/test_image.png" alt="image" >
