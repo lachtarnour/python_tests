@@ -1,10 +1,10 @@
-# Présentation
-Mieux gérer son activité de location est un enjeu majeur pour les professionnels de l'immobilier. Qeeps réinvente le parcours locatif en proposant un outil simple et flexible. Qeeps s’adresse aux professionnels qui cherchent à simplifier la gestion quotidienne de leur location, s’acquitter des démarches administratives et proposer une nouvelle expérience au candidat locataire. Qeeps c'est la plateforme qui permet aux professionnels de l'immobilier de se libérer du temps pour générer plus de revenus.
+# Presentation : 
+Better managing rental activity is a major challenge for real estate professionals. Qeeps reinvents the rental journey by offering a simple and flexible tool. Qeeps is aimed at professionals who seek to simplify the daily management of their rental, complete administrative procedures, and offer a new experience to prospective tenants. Qeeps is the platform that allows real estate professionals to free up time to generate more revenue.
 
-## Objectif
+## Objectif :
 Create a Python script to read the application emails we receive for the apartments for rent from our partner agencies in order to redirect the candidate to Qeeps. To do this, we would like to have a script that easily adapts to different platforms (Seloger, Bienici), in order to retrieve the maximum amount of information about the application.
 
-## Technical Requirements
+## Technical Requirements : 
 • Technical Requirements
 • Create a GitHub repository.
 • Create a Pull Request on this repository.
@@ -13,23 +13,26 @@ Create a Python script to read the application emails we receive for the apartme
 • Ensure that the codebase is object-oriented.
 • Include documentation within the codebase.
 
-## Additional Requirements
+## Additional Requirements :
 • Create test.
+
 • Create CI/CD in Github Action.
 
-## Data
+## Data : 
 You have an example of an email received by **Qeeps** in this `pickle` file below 
 
-## Installation
+## Installation : 
 To run the Python script, you will need to install the required packages listed in the requirements.txt file. You can install them using the following command:
 
 `pip install -r requirements.txt`
 
-## Outputs
+## Outputs : 
+#### CI Tests
+<img src="data_engineer/Image test data eng/test_image.png" alt="image" >
 
+#### Here is the email that I received :
 <p align="center">
   <img src="data_engineer/Image test data eng/email 1-2.jpg" alt="image" width="400" height="840",style="margin-right: 20px">
   <img src="data_engineer/Image test data eng/email 2-2.jpg" alt="image" width="400" height="840"
 </p>
 
-<img src="data_engineer/Image test data eng/test_image.png" alt="image" >
